@@ -38,7 +38,7 @@ var RNProgressHUB = require('react-native-progresshub');
 
 ===== API =====
 
-Note: use in Component
+Note :  used in Component
 
 Simple text with duration
 ```js
