@@ -11,11 +11,8 @@ $ rnpm link
 ```
 
 
-## Compatibility
 
-react-native >= 0.29
-
-### Note about React requires
+## Note about React requires
 
 Since react-native 0.25.0, `React` should be required from `node_modules`.
 React Native versions from 0.18 should be working out of the box, for lower
