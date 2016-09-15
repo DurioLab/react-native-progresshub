@@ -38,6 +38,8 @@ var RNProgressHUB = require('react-native-progresshub');
 
 ===== API =====
 
+Note: use in Component
+
 Simple text with duration
 ```js
 RNProgressHUB.showSimpleText("Message",2000);
