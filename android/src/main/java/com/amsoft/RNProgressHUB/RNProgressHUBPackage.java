@@ -17,16 +17,18 @@ import java.util.List;
  */
 public class RNProgressHUBPackage implements ReactPackage {
 
-    private Activity hubActivity = null;
+//    private Activity mActivity = null;
+//
+//    public RNProgressHUBPackage(Activity activity){
+//        mActivity = activity;
+//    }
 
-    public RNProgressHUBPackage(Activity activity){
-        hubActivity = activity;
-    }
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
-        modules.add(new RNProgressHUBModule(reactContext,hubActivity));
+
+        modules.add(new RNProgressHUBModule(reactContext));
         return modules;
     }
 

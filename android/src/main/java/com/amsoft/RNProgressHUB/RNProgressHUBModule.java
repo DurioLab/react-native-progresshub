@@ -17,14 +17,11 @@ import com.kaopiz.kprogresshud.*;
  * Created by arnoma2015 on 16/9/13.
  */
 public class RNProgressHUBModule  extends ReactContextBaseJavaModule {
-
-
-    private Activity currentActivity = null;
+    
     private KProgressHUD currentHud = null;
 
-    public RNProgressHUBModule(ReactApplicationContext reactContext, Activity activity) {
+    public RNProgressHUBModule(ReactApplicationContext reactContext) {
         super(reactContext);
-        currentActivity = activity;
     }
 
     @Override
@@ -42,11 +39,13 @@ public class RNProgressHUBModule  extends ReactContextBaseJavaModule {
             currentHud = null;
         };
 
-        TextView textView = new TextView(currentActivity);
+        Activity activity = getCurrentActivity();
+
+        TextView textView = new TextView(activity);
         textView.setText(message);
         textView.setTextColor(0xffffffff);
         textView.setTextSize(18.f);
-        currentHud = KProgressHUD.create(currentActivity)
+        currentHud = KProgressHUD.create(activity)
                 .setCustomView(textView)
                 .show();
         scheduleDismiss(duration);
@@ -58,7 +57,9 @@ public class RNProgressHUBModule  extends ReactContextBaseJavaModule {
             currentHud.dismiss();
             currentHud = null;
         };
-        currentHud = KProgressHUD.create(currentActivity)
+
+
+        currentHud = KProgressHUD.create(getCurrentActivity())
                 .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
                 .show();
 
@@ -71,7 +72,7 @@ public class RNProgressHUBModule  extends ReactContextBaseJavaModule {
             currentHud.dismiss();
             currentHud = null;
         };
-        currentHud = KProgressHUD.create(currentActivity)
+        currentHud = KProgressHUD.create(getCurrentActivity())
                 .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
                 .setLabel(label)
                 .show();
@@ -83,7 +84,7 @@ public class RNProgressHUBModule  extends ReactContextBaseJavaModule {
             currentHud.dismiss();
             currentHud = null;
         };
-        currentHud = KProgressHUD.create(currentActivity)
+        currentHud = KProgressHUD.create(getCurrentActivity())
                 .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
                 .setLabel(label)
                 .setDetailsLabel(details)
@@ -99,7 +100,7 @@ public class RNProgressHUBModule  extends ReactContextBaseJavaModule {
 
 //        String modeStr = String.valueOf(mode);
 
-        currentHud = KProgressHUD.create(currentActivity);
+        currentHud = KProgressHUD.create(getCurrentActivity());
         currentHud.setMaxProgress(100);
         currentHud.setStyle(mode == 0 ? KProgressHUD.Style.ANNULAR_DETERMINATE : KProgressHUD.Style.BAR_DETERMINATE);
         if (title != null){
