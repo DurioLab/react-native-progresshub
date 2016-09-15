@@ -22,8 +22,8 @@ versions you should add `react` as a dependency in your `package.json`.
 ## Screenshot
 
 
-
 ## General Usage
+
 
 ```js
 import RNProgressHUB from 'react-native-progresshub';
@@ -83,6 +83,8 @@ RNProgressHUB.dismiss();
 ```
 
 
+### Have problem ? 
+please contact me : developer_mp@163.com
 
 
 
