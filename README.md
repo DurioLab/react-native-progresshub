@@ -63,11 +63,12 @@ Determinate loading
       details:"details"
     });
 
-    setInterval(function () {
+    var interval =  setInterval(function () {
       if(progress <= 1){
-        RNProgressHUB.setProgress(progress);
+        RNProgress.setProgress(progress);
       } else {
-        RNProgressHUB.dismiss();
+        RNProgress.dismiss();
+        clearInterval(interval);
       }
       progress += 0.1;
     },1000);
