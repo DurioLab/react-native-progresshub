@@ -1,7 +1,7 @@
 "use strict";
 
 var RNProgressHUB = require('react-native').NativeModules.RNProgressHUB;
-var IsAndroid = RNProgressHUB.IsAndroid;
+//var IsAndroid = RNProgressHUB.IsAndroid;
 
 
 var determinateMode = {
