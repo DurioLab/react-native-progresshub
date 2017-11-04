@@ -1,6 +1,6 @@
 {
   "name": "react-native-progresshub",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "An implement of ProgressHUD for React-Native, similar to MBProgressHUD for iOS and KProgressHUD for Android.",
   "main": "index.js",
   "scripts": {
