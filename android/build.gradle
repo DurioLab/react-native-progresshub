@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-  compileSdkVersion 23
-  buildToolsVersion "23.0.1"
+  compileSdkVersion 27
+  buildToolsVersion "27.0.1"
 
   defaultConfig {
     minSdkVersion 16
-    targetSdkVersion 23
+    targetSdkVersion 27
     versionCode 1
     versionName "1.0"
     ndk {
@@ -16,6 +16,6 @@ android {
 }
 
 dependencies {
-  compile 'com.facebook.react:react-native:0.20.+'
-  compile 'com.kaopiz:kprogresshud:1.0.5'
+  compile 'com.facebook.react:react-native:+'
+  compile 'com.kaopiz:kprogresshud:1.1.0'
 }
