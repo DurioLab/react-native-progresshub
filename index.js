@@ -3,7 +3,6 @@
 var RNProgressHUB = require('react-native').NativeModules.RNProgressHUB;
 //var IsAndroid = RNProgressHUB.IsAndroid;
 
-
 var determinateMode = {
     "annular":0,
     "bar":1
@@ -54,8 +53,3 @@ ProgressHUB.prototype.setProgress = function (progress) {
 };
 
 export default new ProgressHUB();
-
-
-
-
-
