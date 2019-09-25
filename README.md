@@ -5,11 +5,16 @@ An implement of ProgressHUD for React-Native, similar to MBProgressHUD for iOS a
 
 ## Installation
 
+### For RN < 0.60
 ```
 $ npm install react-native-progresshub --save
-$ rnpm link
+$ react-native link react-native-progresshub
 ```
 
+### For RN >= 0.60
+```
+$ cd ios && pod install
+```
 
 
 ## Note about React requires
@@ -87,16 +92,3 @@ RNProgressHUB.dismiss();
 
 ### Have problem ? 
 please contact me : developer_mp@163.com
-
-
-
-
-
-
-
-
-
-
-
-
-
